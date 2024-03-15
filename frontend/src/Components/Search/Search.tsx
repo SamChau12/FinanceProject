@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useState, MouseEvent } from "react";
+import React, { ChangeEvent, useState, SyntheticEvent } from "react";
 
 type Props = {};
 
@@ -8,7 +8,7 @@ const Search: React.FC<Props> = (props: Props): JSX.Element => {
     setSearch(e.target.value);
     console.log(e);
   };
-  const onClick = (e: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>) => {
+  const onClick = (e: SyntheticEvent) => {
     console.log(e);
   };
   return (
