@@ -30,7 +30,7 @@ function App() {
     }
     console.log(searchResult);
   };
-
+  ///to create portfolio
   const onPortfolioCreate = (e: any) => {
     e.preventDefault();
     //console.log(e);
@@ -39,6 +39,14 @@ function App() {
     const updatedPortfolio = [...portfolioValues, e.target[0].value];
     setPortfolioValues(updatedPortfolio);
   };
+  //to delete portfolio from the list after adding
+  const onPortfolioDelete = (e: any) => {
+    e.preventDefault();
+    const removed = portfolioValues.filter((value) => {
+      return value !== e.target[0].value;
+    });
+    setPortfolioValues(removed);
+  };
   return (
     <div className="App">
       <Search
@@ -46,7 +54,10 @@ function App() {
         search={search}
         handleSearchChange={handleSearchChange}
       />
-      <ListPortfolio portfolioValues={portfolioValues} />
+      <ListPortfolio
+        portfolioValues={portfolioValues}
+        onPortfolioDelete={onPortfolioDelete}
+      />
       <CardList
         searchResults={searchResult}
         onPortfolioCreate={onPortfolioCreate}
