@@ -6,6 +6,8 @@ import { CompanySearch } from "./company";
 import { searchCompanies } from "./api";
 import { on } from "events";
 import ListPortfolio from "./Components/Portfolio/ListPortfolio/ListPortfolio";
+import Hero from "./Components/Hero/Hero";
+import Navbar from "./Components/Navbar/Navbar";
 
 function App() {
   const [search, setSearch] = useState<string>(""); //parameter
@@ -49,6 +51,7 @@ function App() {
   };
   return (
     <div className="App">
+      <Navbar />
       <Search
         onSearchSubmit={onSearchSubmit}
         search={search}
