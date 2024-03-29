@@ -1,4 +1,5 @@
 import React from "react";
+import Table from "../../Components/Table/Table";
 
 type Props = {};
 
@@ -10,7 +11,7 @@ const DesignPage = (props: Props) => {
         this is FinShark's design page. This is where we will house various
         designs aspect of App
       </h2>
-      {/* <Table /> */}
+      <Table />
     </>
   );
 };
