@@ -21,7 +21,7 @@ const DesignPage = (props: Props) => {
         designs aspect of App
       </h2>
       <RatioList data={testIncomeStatementData} config={tableConfig} />
-      <Table />
+      <Table data={testIncomeStatementData} config={tableConfig} />
     </>
   );
 };
